@@ -37,6 +37,10 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+5. Run the celery worker:
+```bash
+celery -A app.tasks.celery_worker worker --loglevel=info
+```
 
 The API will be available at `http://localhost:8000`
 
